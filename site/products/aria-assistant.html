@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aria · AI Chief of Staff — AEVUM FTE-03</title>
+<meta name="description" content="Aria watches two inboxes and WhatsApp 24/7, classifies every message, replies in your voice, and opens, chases and auto-closes the tasks you delegate." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<div class="void-base"></div>
+<div class="orbs"><span class="orb c1"></span><span class="orb c2"></span><span class="orb c3"></span></div>
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="mark">✦</span> AEVUM <span class="ai">FTE-03</span></a>
+    <div class="nav-links">
+      <a href="../index.html#fleet">The Fleet</a>
+      <a href="../lab.html">The Lab</a>
+      <a href="../index.html#platform">Platform</a>
+      <span class="nav-clock"><span class="dot"></span> Deployed MVP</span>
+    </div>
+    <div class="nav-cta"><a href="../index.html#final" class="btn btn-primary" style="padding:.6rem 1.2rem">Deploy an FTE</a></div>
+    <div class="nav-burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<header class="hero p-hero">
+  <div class="wrap">
+    <a class="p-back" href="../index.html#fleet">← Back to the fleet</a>
+    <span class="eyebrow reveal">FTE-03 · AI Chief of Staff</span>
+    <h1 class="reveal"><span class="ai-grad-text">Aria</span></h1>
+    <p class="sub reveal">The teammate who never sleeps on your inbox. Two Gmail accounts and WhatsApp watched <b>24/7</b>, every message LLM-classified, replies drafted <b>in your voice</b>, and delegations that chase themselves until they're done.</p>
+    <div class="p-badges reveal">
+      <span class="tag tag-live"><span class="dot"></span> Deployed MVP</span>
+      <span class="tag">Comms automation</span>
+      <span class="tag">Gmail ×2 · WhatsApp · Calendar</span>
+      <span class="ai-badge">AI-native 4/5</span>
+      <span class="ai-badge">FTE-fit 4/5</span>
+    </div>
+    <div class="spec-grid reveal">
+      <div class="spec glass"><div class="k">LLM workloads</div><div class="v">6<small>Classify · reply · learn…</small></div></div>
+      <div class="spec glass"><div class="k">Urgency model</div><div class="v">0–100<small>Mapped to priority</small></div></div>
+      <div class="spec glass"><div class="k">Backend tests</div><div class="v">~114<small>Across 11 files</small></div></div>
+      <div class="spec glass"><div class="k">Deploy</div><div class="v">Live VM<small>nginx · systemd · watchdog</small></div></div>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:3rem">
+  <div class="wrap">
+    <div class="section-head left reveal" style="margin-bottom:2rem"><span class="eyebrow">What runs today vs. the roadmap</span></div>
+    <div class="cols">
+      <div class="card live glass reveal">
+        <h3><span class="dot"></span> Running today</h3>
+        <div class="csub">Real LLM, deeply woven — not bolted on.</div>
+        <ul class="feat">
+          <li><span class="ck">✦</span><span><b>Two inboxes + WhatsApp, watched 24/7</b> — Gmail polled every 120s with smart deep-sync; WhatsApp every 10s with JID→contact resolution.</span></li>
+          <li><span class="ck">✦</span><span><b>LLM classification of every message</b> — intent, a 0–100 urgency score, entities, summary and a proposed due date.</span></li>
+          <li><span class="ck">✦</span><span><b>Replies in your voice</b> — drafts from a per-contact style profile, and a learning loop that improves from every edit you make.</span></li>
+          <li><span class="ck">✦</span><span><b>Delegations that close themselves</b> — detects a hand-off, opens and assigns a task, chases the overdue via WhatsApp + a gentle email, and auto-closes when the reply says "done."</span></li>
+          <li><span class="ck">✦</span><span><b>Approve → send, for real</b> — calendar awareness, WebSocket live updates, audit log, and a 13-page React control panel on the live API.</span></li>
+        </ul>
+      </div>
+      <div class="card road glass reveal">
+        <h3><span class="dot amber"></span> On the roadmap</h3>
+        <div class="csub">From smart drafting to true agency.</div>
+        <ul class="feat">
+          <li><span class="ck" style="color:var(--amber)">◆</span><span><b>Agentic chat</b> — wire the already-defined <span class="display" style="font-family:var(--font-mono)">tool_calls</span> schema so "type a command, it executes" actually runs (today it's read-only Q&amp;A).</span></li>
+          <li><span class="ck" style="color:var(--amber)">◆</span><span><b>Policy-gated autonomy</b> — "auto-send under $X / below urgency Y," trust lists, confidence thresholds, one-click undo. (Autonomy ships in safe testing-mode today.)</span></li>
+          <li><span class="ck" style="color:var(--amber)">◆</span><span><b>Semantic memory</b> — replace keyword/ILIKE retrieval with embeddings for sharper voice consistency.</span></li>
+          <li><span class="ck" style="color:var(--amber)">◆</span><span><b>Multi-tenant + secrets hygiene</b> — accounts, per-tenant credential vaults; rotate the keys currently in the repo before any public showcase.</span></li>
+        </ul>
+        <p class="honest-note">Honesty note: six real LLM workloads run, but the <em>actions</em> are still rule-gated, not an agentic planner. Provider is Gemini + OpenAI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="replaces glass reveal">
+      <div>
+        <span class="eyebrow">The role it replaces</span>
+        <h3>An EA and an ops coordinator.</h3>
+        <p>Reading, triaging and drafting across email + WhatsApp (the EA), plus opening, assigning and chasing every delegation to closure (the coordinator) — both running on a 24/7 shift.</p>
+      </div>
+      <div class="big ai-grad-text">20–35<small>hrs/week reclaimed · target</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head left reveal" style="margin-bottom:1.6rem"><span class="eyebrow">The 60-second showcase</span></div>
+    <div class="demo-card glass reveal">
+      <div class="demo-head"><span class="dot"></span> aevum://fte-03 — delegation loop</div>
+      <div class="demo-body">
+        <div class="demo-step"><div class="sn">01</div><div class="st">Send the watched inbox: <b>"POS is down at Sehar, please fix ASAP."</b></div></div>
+        <div class="demo-step"><div class="sn">02</div><div class="st">Live on screen: classified <b>TOP_URGENT</b>, a delegation task is <b>auto-created and assigned</b>, and the owner gets a WhatsApp alert within ~30 seconds.</div></div>
+        <div class="demo-step"><div class="sn">03</div><div class="st">Reply <b>"fixed, replaced the router"</b> — and watch the task <b>auto-close</b> from the completion signal.</div></div>
+      </div>
+    </div>
+    <div class="prose reveal"><p>Aria is the most on-narrative asset in the fleet — a concrete inbox-and-delegation chief-of-staff that already runs around the clock and demos beautifully. The honest gap is agency: the intelligence to read, understand, draft and prioritise is all there; the next release adds the policy-gated autonomy to decide and act end-to-end.</p></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap"><div class="pager">
+    <a href="personal-ai-employee.html">← FTE-02 AI Back-Office Clerk</a>
+    <a href="operanova.html">Next · FTE-04 AI Cost Controller →</a>
+  </div></div>
+</section>
+
+<footer>
+  <div class="wrap"><div class="foot-bottom" style="border:none;margin:0;padding:0">
+    <span>© 2026 AEVUM · Aria dossier</span>
+    <span>Fleet online · <span data-clock>00:00:00</span> · <span class="dot" style="display:inline-block"></span></span>
+  </div></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

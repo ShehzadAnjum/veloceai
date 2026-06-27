@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vision Alert · AI Security Guard — AEVUM FTE-05</title>
+<meta name="description" content="Vision Alert turns the Dahua NVR you already own into a 24/7 AI guard — YOLO11 detection, object tracking and zone rules that fire a WhatsApp snapshot in seconds. The roadmap adds VLM judgment." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<div class="void-base"></div>
+<div class="orbs"><span class="orb c1"></span><span class="orb c2"></span><span class="orb c3"></span></div>
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="mark">✦</span> AEVUM <span class="ai">FTE-05</span></a>
+    <div class="nav-links">
+      <a href="../index.html#fleet">The Fleet</a>
+      <a href="../lab.html">The Lab</a>
+      <a href="../index.html#platform">Platform</a>
+      <span class="nav-clock"><span class="dot"></span> MVP · NVR-proven</span>
+    </div>
+    <div class="nav-cta"><a href="../index.html#final" class="btn btn-primary" style="padding:.6rem 1.2rem">Deploy an FTE</a></div>
+    <div class="nav-burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<header class="hero p-hero">
+  <div class="wrap">
+    <a class="p-back" href="../index.html#fleet">← Back to the fleet</a>
+    <span class="eyebrow reveal">FTE-05 · AI Security Guard</span>
+    <h1 class="reveal">Vision <span class="ai-grad-text">Alert</span></h1>
+    <p class="sub reveal">Turn the NVR you already own into a <b>24/7 AI guard</b>. It reads your existing camera feeds, tracks people and vehicles, watches the zones you draw, and fires a WhatsApp snapshot the moment a rule breaks — no rip-and-replace.</p>
+    <div class="p-badges reveal">
+      <span class="tag tag-live"><span class="dot"></span> MVP · live on a real NVR</span>
+      <span class="tag">Computer vision</span>
+      <span class="tag">YOLO11 + ByteTrack</span>
+      <span class="ai-badge">AI-native 3/5</span>
+      <span class="ai-badge">FTE-fit 4/5</span>
+    </div>
+    <div class="spec-grid reveal">
+      <div class="spec glass"><div class="k">Ingest</div><div class="v">RTSP<small>Existing Dahua NVR</small></div></div>
+      <div class="spec glass"><div class="k">Proven</div><div class="v">~12 FPS<small>Live, read-only</small></div></div>
+      <div class="spec glass"><div class="k">Zone rules</div><div class="v">3<small>Intrusion · loiter · line-cross</small></div></div>
+      <div class="spec glass"><div class="k">Tests</div><div class="v">24<small>Passing</small></div></div>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:3rem">
+  <div class="wrap">
+    <div class="section-head left reveal" style="margin-bottom:2rem"><span class="eyebrow">What runs today vs. the roadmap</span></div>
+    <div class="cols">
+      <div class="card live glass reveal">
+        <h3><span class="dot"></span> Running today</h3>
+        <div class="csub">Read and confirmed in source · pytest → 24 passed.</div>
+        <ul class="feat">
+          <li><span class="ck">✦</span><span><b>Live RTSP ingest, NVR-proven</b> — pulls the existing Dahua sub-stream read-only with auto-reconnect; verified against a real recorder at ~12 FPS.</span></li>
+          <li><span class="ck">✦</span><span><b>YOLO11 detection + object tracking</b> — class-filtered to people and vehicles, with a from-scratch ByteTrack tracker giving stable track IDs.</span></li>
+          <li><span class="ck">✦</span><span><b>Zone rules engine</b> — intrusion (point-in-polygon), loiter (dwell ≥ N s) and line-cross (directed), each with per-track cooldown to kill repeat spam.</span></li>
+          <li><span class="ck">✦</span><span><b>Browser dashboard</b> — channel selector, live annotated MJPEG view, a react-konva zone/line editor, and a live alert feed over SSE.</span></li>
+          <li><span class="ck">✦</span><span><b>Alert store + WhatsApp snapshots</b> — alerts and snapshots persisted; a rule break sends an annotated image via the WhatsApp bridge in seconds.</span></li>
+        </ul>
+      </div>
+      <div class="card road glass reveal">
+        <h3><span class="dot amber"></span> On the roadmap</h3>
+        <div class="csub">Add the judgment half of a guard's job.</div>
+        <ul class="feat">
+          <li><span class="ck" style="color:var(--amber)">◆</span><span><b>VLM reasoning agent</b> — describe the incident in plain language ("a person climbing the fence near Gate 2"), classify intent and severity, and <b>suppress false positives</b> (couriers, staff, shadows).</span></li>
+          <li><span class="ck" style="color:var(--amber)">◆</span><span><b>Contextual escalation</b> — silent log for benign, written WhatsApp summary for real, phone/siren for critical.</span></li>
+          <li><span class="ck" style="color:var(--amber)">◆</span><span><b>Production GPU serving + scale</b> — prove the Triton/TensorRT + hardware-decode path and batch inference across 9–32 channels (today: 1–2).</span></li>
+          <li><span class="ck" style="color:var(--amber)">◆</span><span><b>Hardening</b> — durable event store, evidence-clip capture, auth on the dashboard, plus PPE / fire-and-smoke / loss-prevention variants.</span></li>
+        </ul>
+        <p class="honest-note">Honesty note: today's "AI" is classical CV perception — it detects, it doesn't yet <em>understand</em>. An alert is a row, not a narrated incident. The reasoning agent is the upgrade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="replaces glass reveal">
+      <div>
+        <span class="eyebrow">The role it replaces</span>
+        <h3>A monitoring-room seat.</h3>
+        <p>The guard watching a wall of feeds for the one moment that matters — replaced by an agent that never blinks, never gets bored, and runs on a single GPU next to the recorder you already bought.</p>
+      </div>
+      <div class="big ai-grad-text">~1<small>guard seat / site · 8–24 hrs/day</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head left reveal" style="margin-bottom:1.6rem"><span class="eyebrow">The 60-second showcase</span></div>
+    <div class="demo-card glass reveal">
+      <div class="demo-head"><span class="dot"></span> aevum://fte-05 — live stairwell feed</div>
+      <div class="demo-body">
+        <div class="demo-step"><div class="sn">01</div><div class="st">On the real NVR feed, <b>drag a polygon across a doorway</b> in the browser zone editor.</div></div>
+        <div class="demo-step"><div class="sn">02</div><div class="st"><b>Walk through it.</b> A green track box follows you and the intrusion rule fires.</div></div>
+        <div class="demo-step"><div class="sn">03</div><div class="st">An <b>annotated snapshot lands on WhatsApp</b> in seconds — and on the live alert feed.</div></div>
+      </div>
+    </div>
+    <div class="prose reveal"><p>Vision Alert is a real, working perception pipeline with an unusually high-value upgrade path. The plumbing a security FTE needs — 24/7 feeds, stable tracking, alerts, snapshot notifications — is already pointed at exactly the right seat. Bolt a VLM reasoning agent onto the crops it already produces, and "it detects" becomes "it understands, decides, and tells you what happened."</p></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap"><div class="pager">
+    <a href="operanova.html">← FTE-04 AI Cost Controller</a>
+    <a href="../index.html#fleet">All five FTEs →</a>
+  </div></div>
+</section>
+
+<footer>
+  <div class="wrap"><div class="foot-bottom" style="border:none;margin:0;padding:0">
+    <span>© 2026 AEVUM · Vision Alert dossier</span>
+    <span>Fleet online · <span data-clock>00:00:00</span> · <span class="dot" style="display:inline-block"></span></span>
+  </div></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

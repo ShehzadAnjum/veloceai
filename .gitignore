@@ -1,0 +1,20 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# logs / temp
+*.log
+tmp/
+scratchpad/
+
+# node (none yet, but guard against future installs)
+node_modules/
+
+# secrets — never commit
+.env
+.env.*
+*.pem
+*.key
